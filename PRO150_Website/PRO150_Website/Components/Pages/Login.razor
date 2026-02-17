@@ -18,16 +18,15 @@
     <div class="login">
         <EditForm Formname="Login" Model="info" OnValidSubmit="Submit">
             <DataAnnotationsValidator />
-            <ValidationSummary />
             @if (isLoginActive)
             {
-                <h1>Log In</h1>
-                <div>
+                <h1 style="margin: 10px">Log In</h1>
+                <div style="margin: 20px">
                     <label for="email">Email: </label>
                     <InputText id="email" @bind-Value="info.Email"/>
                     <ValidationMessage For="@(() => info.Email)" />
                 </div>
-                <div>
+                <div style="margin: 30px">
                     <label for="password">Password: </label>
                     <InputText id="password" @bind-Value="info.Password"/>
                     <ValidationMessage For="@(() => info.Password)" />
@@ -35,7 +34,17 @@
             }
             else
             {
-                <h1>Sign Up</h1>
+                <h1 style="margin: 10px">Sign Up</h1>
+                <div style="margin: 20px">
+                    <label for="email">Email: </label>
+                    <InputText id="email" @bind-Value="info.Email" />
+                    <ValidationMessage For="@(() => info.Email)" />
+                </div>
+                <div style="margin: 30px">
+                    <label for="password">Password: </label>
+                    <InputText id="password" @bind-Value="info.Password" />
+                    <ValidationMessage For="@(() => info.Password)" />
+                </div>
             }
 
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -49,6 +58,7 @@
     private void SetActive(bool loginActive)
     {
         isLoginActive = loginActive;
+        info = new LoginInfo();
     }
 
     private LoginInfo info = new LoginInfo();
