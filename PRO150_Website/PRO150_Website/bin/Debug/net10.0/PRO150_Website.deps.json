@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "PRO150_Website/1.0.0": {
+        "runtime": {
+          "PRO150_Website.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PRO150_Website/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

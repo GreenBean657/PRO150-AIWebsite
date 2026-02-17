@@ -1,0 +1,64 @@
+﻿@page "/"
+@layout BaseLayout
+@rendermode InteractiveServer
+<HeadContent>
+    <link rel="stylesheet" href="@Assets["login.css"]" />
+</HeadContent>
+
+<PageTitle>Login</PageTitle>
+
+<div class="fullScreenDiv">
+    <h1>Chat Bot</h1>
+    <br />
+    <div>
+        <button type="button" @onclick="() => SetActive(true)" class="btn btn-primary">Log In</button>
+        <span style="padding: 80px;"></span>
+        <button type="button" @onclick="() => SetActive(false)" class="btn btn-primary">Sign Up</button>
+    </div>
+    <div class="login">
+        <EditForm Formname="Login" Model="info" OnValidSubmit="Submit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+            @if (isLoginActive)
+            {
+                <h1>Log In</h1>
+                <div>
+                    <label for="email">Email: </label>
+                    <InputText id="email" @bind-Value="info.Email"/>
+                    <ValidationMessage For="@(() => info.Email)" />
+                </div>
+                <div>
+                    <label for="password">Password: </label>
+                    <InputText id="password" @bind-Value="info.Password"/>
+                    <ValidationMessage For="@(() => info.Password)" />
+                </div>
+            }
+            else
+            {
+                <h1>Sign Up</h1>
+            }
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    private bool isLoginActive = true;
+
+    private void SetActive(bool loginActive)
+    {
+        isLoginActive = loginActive;
+    }
+
+    private LoginInfo info = new LoginInfo();
+    @inject NavigationManager NavigationManager
+
+    private void Submit()
+    {
+        if(info.ValadateLogin())
+        {
+            NavigationManager.NavigateTo("/Home");
+        }
+    }
+}

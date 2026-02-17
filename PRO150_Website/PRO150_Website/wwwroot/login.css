@@ -1,0 +1,25 @@
+﻿body {
+    background-image: url(https://img.freepik.com/free-vector/gradient-black-background-with-wavy-lines_23-2149145961.jpg?semt=ais_hybrid&w=740&q=80);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Courier New;
+    color: white;
+    font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+}
+
+.fullScreenDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    height: 90vh;
+}
+
+.login {
+    background-color: dimgrey;
+
+    width: 500px;
+    height: 400px;
+}
