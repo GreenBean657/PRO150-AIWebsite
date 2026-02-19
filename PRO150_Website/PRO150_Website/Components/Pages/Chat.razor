@@ -1,0 +1,29 @@
+﻿@page "/chat"
+@using System.ComponentModel.DataAnnotations
+@rendermode InteractiveServer
+
+<PageTitle>Chat</PageTitle>
+
+<div style="height: 90vh; background-color: gray">
+    @foreach(string c in chat)
+    {
+        <div>@c</div>
+    }
+
+</div>
+<div style="height: 50px; text-align: end;">
+    <EditForm FormName="Message" Model="message" OnValidSubmit="OnSubmit">
+        <InputText style="width: 70%" id="message" @bind-Value="message.message" />
+    </EditForm>
+</div>
+
+@code {
+    private Message message = new Message();
+
+    public List<string> chat = new List<string>();
+
+    private void OnSubmit() {
+        chat.Add(message.message);
+        message.message = "";
+    }
+}
