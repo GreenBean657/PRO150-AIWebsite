@@ -3,36 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|c:\\users\\kcradic\\source\\repos\\pro150-aiwebsite\\pro150_website\\pro150_website\\components\\pages\\chat.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|solutionrelative:pro150_website\\components\\pages\\chat.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|c:\\users\\kcradic\\source\\repos\\pro150-aiwebsite\\pro150_website\\pro150_website\\components\\models\\logininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|solutionrelative:pro150_website\\components\\models\\logininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|c:\\users\\kcradic\\source\\repos\\pro150-aiwebsite\\pro150_website\\pro150_website\\wwwroot\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|solutionrelative:pro150_website\\wwwroot\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|c:\\users\\kcradic\\source\\repos\\pro150-aiwebsite\\pro150_website\\pro150_website\\components\\pages\\chat.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|solutionrelative:pro150_website\\components\\pages\\chat.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|c:\\users\\kcradic\\source\\repos\\pro150-aiwebsite\\pro150_website\\pro150_website\\components\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|solutionrelative:pro150_website\\components\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|c:\\users\\kcradic\\source\\repos\\pro150-aiwebsite\\pro150_website\\pro150_website\\components\\models\\logininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|solutionrelative:pro150_website\\components\\models\\logininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|c:\\users\\kcradic\\source\\repos\\pro150-aiwebsite\\pro150_website\\pro150_website\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|solutionrelative:pro150_website\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|c:\\users\\kcradic\\source\\repos\\pro150-aiwebsite\\pro150_website\\pro150_website\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|solutionrelative:pro150_website\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|c:\\users\\kcradic\\source\\repos\\pro150-aiwebsite\\pro150_website\\pro150_website\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|solutionrelative:pro150_website\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|c:\\users\\kcradic\\source\\repos\\pro150-aiwebsite\\pro150_website\\pro150_website\\wwwroot\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|solutionrelative:pro150_website\\wwwroot\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|c:\\users\\kcradic\\source\\repos\\pro150-aiwebsite\\pro150_website\\pro150_website\\wwwroot\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|solutionrelative:pro150_website\\wwwroot\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|c:\\users\\kcradic\\source\\repos\\pro150-aiwebsite\\pro150_website\\pro150_website\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|solutionrelative:pro150_website\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|c:\\users\\kcradic\\source\\repos\\pro150-aiwebsite\\pro150_website\\pro150_website\\wwwroot\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|solutionrelative:pro150_website\\wwwroot\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,17 +38,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "style.css",
               "DocumentMoniker": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\PRO150_Website\\wwwroot\\style.css",
               "RelativeDocumentMoniker": "PRO150_Website\\wwwroot\\style.css",
               "ToolTip": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\PRO150_Website\\wwwroot\\style.css",
               "RelativeToolTip": "PRO150_Website\\wwwroot\\style.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-02-19T16:39:44.852Z",
               "EditorCaption": ""
@@ -65,53 +61,40 @@
               "RelativeDocumentMoniker": "PRO150_Website\\Components\\Models\\Message.cs",
               "ToolTip": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\PRO150_Website\\Components\\Models\\Message.cs",
               "RelativeToolTip": "PRO150_Website\\Components\\Models\\Message.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-19T16:31:10.587Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Chat.razor",
               "DocumentMoniker": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\PRO150_Website\\Components\\Pages\\Chat.razor",
               "RelativeDocumentMoniker": "PRO150_Website\\Components\\Pages\\Chat.razor",
               "ToolTip": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\PRO150_Website\\Components\\Pages\\Chat.razor",
               "RelativeToolTip": "PRO150_Website\\Components\\Pages\\Chat.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-02-19T16:15:40.099Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Imports.razor",
-              "DocumentMoniker": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\PRO150_Website\\Components\\_Imports.razor",
-              "RelativeDocumentMoniker": "PRO150_Website\\Components\\_Imports.razor",
-              "ToolTip": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\PRO150_Website\\Components\\_Imports.razor",
-              "RelativeToolTip": "PRO150_Website\\Components\\_Imports.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-17T17:01:03.09Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "LoginInfo.cs",
               "DocumentMoniker": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\PRO150_Website\\Components\\Models\\LoginInfo.cs",
               "RelativeDocumentMoniker": "PRO150_Website\\Components\\Models\\LoginInfo.cs",
               "ToolTip": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\PRO150_Website\\Components\\Models\\LoginInfo.cs",
               "RelativeToolTip": "PRO150_Website\\Components\\Models\\LoginInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-17T16:52:33.937Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Login.razor",
               "DocumentMoniker": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\PRO150_Website\\Components\\Pages\\Login.razor",
               "RelativeDocumentMoniker": "PRO150_Website\\Components\\Pages\\Login.razor",
@@ -124,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\PRO150_Website\\Components\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "PRO150_Website\\Components\\Layout\\NavMenu.razor",

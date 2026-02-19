@@ -4,16 +4,20 @@
 
 <PageTitle>Chat</PageTitle>
 
-<div style="height: 90vh; background-color: gray">
+<div style="height: 90vh; background-color: darkcyan">
     @foreach(string c in chat)
     {
         <div>@c</div>
+        <br />
     }
 
 </div>
 <div style="height: 50px; text-align: end;">
     <EditForm FormName="Message" Model="message" OnValidSubmit="OnSubmit">
-        <InputText style="width: 70%" id="message" @bind-Value="message.message" />
+        <DataAnnotationsValidator />
+        <div>
+            <InputText style="width: 70%" id="message" @bind-Value="message.message" />
+        </div>
     </EditForm>
 </div>
 
