@@ -1,6 +1,47 @@
 ﻿@page "/history"
 @rendermode InteractiveServer
 
-@code {
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">
+                HISTORY
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (List<string> chat in Chats.allChats)
+        {
+            <tr>
+                <tb>Last Message: </tb>
+                <tb>
+                    @if (chat.Count != 0) { @chat[chat.Count - 1] }
+                    else { @defaultMessage; }
+                </tb>
+                <tb>
+                    @if(chat != Chats.activeChat) {
+                    <span> </span>
+                    <button type="button"
+                        class="btn btn-primary"
+                        @onclick="() => Chats.SetActive(chat)">
+                        Set Active
+                    </button>
+                   
+                    } else {
+                    <span> </span>
+                    <button type="button"
+                        class="btn btn-Danger"
+                        disabled>
+                        ACTIVE
+                    </button>
+                        
+                    }
+                </tb>
+            </tr>
+        }
+    </tbody>
+</table>
 
+@code {
+    string defaultMessage = "No Message Yet";
 }

@@ -4,8 +4,15 @@
 
 <PageTitle>Chat</PageTitle>
 
-<div style="height: 90vh; background-color: darkcyan">
-    @foreach(string c in chat)
+<div style="text-align: end">
+    <button type="button" 
+        class="btn btn-primary"
+        @onclick="NewChat">
+        Start New Chat
+    </button>
+</div>
+<div style="height: 90vh; background-color: lightslategray">
+    @foreach (string c in Chats.activeChat)
     {
         <div>@c</div>
         <br />
@@ -24,10 +31,10 @@
 @code {
     private Message message = new Message();
 
-    public List<string> chat = new List<string>();
-
     private void OnSubmit() {
-        chat.Add(message.message);
+        Chats.activeChat.Add(message.message);
         message.message = "";
     }
+
+    private void NewChat() { Chats.NewChat(); }
 }

@@ -6,6 +6,10 @@
     font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
 }
 
+.centerTextDiv {
+    text-align: center;
+}
+
 .button-link {
     background: none;
     border: none;
