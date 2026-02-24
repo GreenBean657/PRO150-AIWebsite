@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|c:\\users\\kcradic\\source\\repos\\pro150-aiwebsite\\pro150_website\\pro150_website\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|solutionrelative:pro150_website\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|c:\\users\\kcradic\\source\\repos\\pro150-aiwebsite\\pro150_website\\pro150_website\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4541E110-5C03-59EE-8823-BA7D28F70A24}|PRO150_Website\\PRO150_Website.csproj|solutionrelative:pro150_website\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -30,11 +34,64 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 10,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\PRO150_Website\\Components\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "PRO150_Website\\Components\\Pages\\Login.razor",
+              "ToolTip": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\PRO150_Website\\Components\\Pages\\Login.razor",
+              "RelativeToolTip": "PRO150_Website\\Components\\Pages\\Login.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-24T23:37:15.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "style.css",
               "DocumentMoniker": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\PRO150_Website\\wwwroot\\style.css",
               "RelativeDocumentMoniker": "PRO150_Website\\wwwroot\\style.css",
@@ -46,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\PRO150_Website\\Components\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "PRO150_Website\\Components\\Layout\\NavMenu.razor",
@@ -59,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "History.razor",
               "DocumentMoniker": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\PRO150_Website\\Components\\Pages\\History.razor",
               "RelativeDocumentMoniker": "PRO150_Website\\Components\\Pages\\History.razor",
@@ -71,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Chat.razor",
               "DocumentMoniker": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\PRO150_Website\\Components\\Pages\\Chat.razor",
               "RelativeDocumentMoniker": "PRO150_Website\\Components\\Pages\\Chat.razor",
@@ -83,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Chats.cs",
               "DocumentMoniker": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\PRO150_Website\\Components\\Models\\Chats.cs",
               "RelativeDocumentMoniker": "PRO150_Website\\Components\\Models\\Chats.cs",

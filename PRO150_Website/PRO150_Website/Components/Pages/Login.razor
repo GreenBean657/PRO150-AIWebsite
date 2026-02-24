@@ -1,6 +1,7 @@
 ﻿@page "/"
 @layout BaseLayout
 @rendermode InteractiveServer
+@inject NavigationManager NavigationManager
 <HeadContent>
     <link rel="stylesheet" href="@Assets["login.css"]" />
 </HeadContent>
@@ -62,7 +63,6 @@
     }
 
     private LoginInfo info = new LoginInfo();
-    @inject NavigationManager NavigationManager
 
     private void Submit()
     {
