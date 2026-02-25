@@ -94,8 +94,8 @@ C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\www
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\wwwroot\login.css
+C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\wwwroot\style.css
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\Components\Layout\ReconnectModal.razor.js
 C:\Users\kcradic\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.1\_framework\blazor.web.js
 C:\Users\kcradic\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.1\_framework\blazor.server.js
-C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\wwwroot\login.css
-C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\wwwroot\style.css

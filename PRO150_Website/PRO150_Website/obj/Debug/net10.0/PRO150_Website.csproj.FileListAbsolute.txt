@@ -15,6 +15,7 @@ C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\PRO150_Website.AssemblyInfo.cs
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\PRO150_Website.csproj.CoreCompileInputs.cache
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\PRO150_Website.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\PRO150_Website.sourcelink.json
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\rjimswa.dswa.cache.json
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
@@ -68,6 +69,8 @@ C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\compressed\v1jdx8gqh1-{0}-h1s4sie4z3-h1s4sie4z3.gz
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\compressed\xnmm0pqjnt-{0}-63fj8s7r0e-63fj8s7r0e.gz
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\compressed\e2bi11y3k2-{0}-0j3bgjxly4-0j3bgjxly4.gz
+C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\compressed\rsh2dgos0l-{0}-975uekmvmf-975uekmvmf.gz
+C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\compressed\iw7ohnj5ce-{0}-1prgzxyxwy-1prgzxyxwy.gz
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\compressed\i6hacca82r-{0}-13ja33weya-13ja33weya.gz
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\compressed\ah1zrnv40u-{0}-wmp8iwak4q-wmp8iwak4q.gz
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\compressed\2w62qb47e9-{0}-2lgipwaf5j-2lgipwaf5j.gz
@@ -84,6 +87,3 @@ C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\PRO150_Website.pdb
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\PRO150_Website.genruntimeconfig.cache
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\ref\PRO150_Website.dll
-C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\PRO150_Website.sourcelink.json
-C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\compressed\rsh2dgos0l-{0}-975uekmvmf-975uekmvmf.gz
-C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\compressed\iw7ohnj5ce-{0}-1prgzxyxwy-1prgzxyxwy.gz
