@@ -32,24 +32,30 @@
 
 @code {
     private Message message = new Message();
+    private bool canSubmit = true;
 
-    async private void OnSubmit() {
-        Chats.activeChat.Add(message.message);
-        await SendRequest(new ChatMessage{role = "user", content = message.message});
-        message.message = "";
-        StateHasChanged();
+    async private void OnSubmit()
+    {
+        if (canSubmit)
+        {
+            canSubmit = false;
+            Chats.activeChat.Add("User: " + message.message);
+            await SendRequest(new MessageBuilder().BuildMsg(Chats.activeChat));
+            message.message = "";
+            StateHasChanged();
+            canSubmit = true;
+        }
     }
 
-    private async Task SendRequest(ChatMessage msg)
+    private async Task SendRequest(ChatMessage msg, string model = "openai/chatgpt-oss-120b")
     {
         var request = new ChatRequest
         {
-            //local LM studio model
-            model = "openai/chatgpt-oss-120b",
+            model = model,
             stream = true,
             messages = new()
             {
-                new ChatMessage { role = "system", content = "You answer only in rhymes." },
+                new SystemPromptBuilder().BuildMsg("`Bot:` is you, `User:` is the user. Respond to the most recent `User:` query."),
                 msg
             }
         };
@@ -61,61 +67,76 @@
 
         httpRequest.Content = JsonContent.Create(request);
 
-        var response = await Http.SendAsync(
-            httpRequest,
-            HttpCompletionOption.ResponseHeadersRead
-        );
-
-        using var stream = await response.Content.ReadAsStreamAsync();
-        using var reader = new StreamReader(stream);
-        
-        Chats.activeChat.Add(""); // INTENTIONALLY BLANK, DO NOT REMOVE.
-        while (!reader.EndOfStream)
+        try
         {
-            var line = await reader.ReadLineAsync();
-            if (string.IsNullOrWhiteSpace(line)) continue;
-            if (line.StartsWith("data: "))
+            var response = await Http.SendAsync(
+                httpRequest,
+                HttpCompletionOption.ResponseHeadersRead
+            );
+
+            if (!response.IsSuccessStatusCode)
             {
-                line = line.Substring(6);
+                var errorBody = await response.Content.ReadAsStringAsync();
+                Chats.activeChat.Add($"Request failed ({(int)response.StatusCode}): {errorBody}");
+                StateHasChanged();
+                return;
             }
 
-            if (line == "[DONE]")
-            {
-                break;
-            }
+            using var stream = await response.Content.ReadAsStreamAsync();
+            using var reader = new StreamReader(stream);
 
-            try
+            Chats.activeChat.Add("Bot: "); // INTENTIONALLY BLANK, DO NOT REMOVE.
+            while (!reader.EndOfStream)
             {
-                using var doc = JsonDocument.Parse(line);
-                var root = doc.RootElement;
-
-                if (root.TryGetProperty("choices", out var choices))
+                var line = await reader.ReadLineAsync();
+                if (string.IsNullOrWhiteSpace(line)) continue;
+                if (line.StartsWith("data: "))
                 {
-                    var firstChoice = choices[0];
+                    line = line.Substring(6);
+                }
 
-                    if (firstChoice.TryGetProperty("delta", out var delta))
+                if (line == "[DONE]")
+                {
+                    break;
+                }
+
+                try
+                {
+                    using var doc = JsonDocument.Parse(line);
+                    var root = doc.RootElement;
+
+                    if (root.TryGetProperty("choices", out var choices))
                     {
-                        if (delta.TryGetProperty("content", out var content))
+                        var firstChoice = choices[0];
+
+                        if (firstChoice.TryGetProperty("delta", out var delta))
                         {
-                            if (content.GetString() != null)
+                            if (delta.TryGetProperty("content", out var content))
                             {
-                                if (Chats.activeChat.Count > 0)
+                                if (content.GetString() != null)
                                 {
-                                    Chats.activeChat[^1] += content.GetString();
+                                    if (Chats.activeChat.Count > 0)
+                                    {
+                                        Chats.activeChat[^1] += content.GetString();
+                                    }
+                                    StateHasChanged();
                                 }
-                                StateHasChanged();
                             }
                         }
                     }
                 }
-            }
-            catch (JsonException)
-            {
-                continue;
+                catch (JsonException)
+                {
+                    continue;
+                }
             }
         }
-        //Chats.activeChat.Add(botMessage);
+        catch (HttpRequestException ex)
+        {
+            Chats.activeChat.Add($"[ERR] Connection failed: {ex.Message}");
+            StateHasChanged();
+        }
     }
-    
+
     private void NewChat() { Chats.NewChat(); }
 }
