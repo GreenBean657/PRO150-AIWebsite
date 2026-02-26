@@ -32,7 +32,6 @@
 
 @code {
     private Message message = new Message();
-    private string? botMessage;
 
     async private void OnSubmit() {
         Chats.activeChat.Add(message.message);
@@ -46,7 +45,7 @@
         var request = new ChatRequest
         {
             //local LM studio model
-            model = "google/gemma-3-4b",
+            model = "openai/chatgpt-oss-120b",
             stream = true,
             messages = new()
             {
@@ -69,8 +68,8 @@
 
         using var stream = await response.Content.ReadAsStreamAsync();
         using var reader = new StreamReader(stream);
-
-        botMessage = "";
+        
+        Chats.activeChat.Add(""); // INTENTIONALLY BLANK, DO NOT REMOVE.
         while (!reader.EndOfStream)
         {
             var line = await reader.ReadLineAsync();
@@ -98,8 +97,14 @@
                     {
                         if (delta.TryGetProperty("content", out var content))
                         {
-
-                            botMessage += content.GetString() + " ";
+                            if (content.GetString() != null)
+                            {
+                                if (Chats.activeChat.Count > 0)
+                                {
+                                    Chats.activeChat[^1] += content.GetString();
+                                }
+                                StateHasChanged();
+                            }
                         }
                     }
                 }
@@ -109,7 +114,7 @@
                 continue;
             }
         }
-        Chats.activeChat.Add(botMessage);
+        //Chats.activeChat.Add(botMessage);
     }
     
     private void NewChat() { Chats.NewChat(); }
