@@ -38,9 +38,8 @@ namespace PRO150_Website.Components.Models
             var result = await cmd.ExecuteScalarAsync();
 
             if (result is not string storedPassword)
-                return false; // no such email
+                return false;
 
-            // Plaintext comparison for now (you'll switch to bcrypt/argon2 later)
             return storedPassword == Password;
         }
     }
