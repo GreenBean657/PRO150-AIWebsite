@@ -49,13 +49,14 @@
 
     private async Task SendRequest(ChatMessage msg, string model = "google/gemma-3-4b")
     {
+        string promptBuilder = " ";
         var request = new ChatRequest
         {
             model = model,
             stream = true,
             messages = new()
             {
-                new SystemPromptBuilder().BuildMsg("Respond to the most recent `User:` query. Do not add 'Bot:' to your message. Do not append the word bot to your message in any form."),
+                new SystemPromptBuilder().BuildMsg(promptBuilder, "Respond to the most recent `User:` query. Do not add 'Bot:' to your message. Do not append the word bot to your message in any form."),
                 msg
             }
         };
@@ -85,7 +86,7 @@
             using var stream = await response.Content.ReadAsStreamAsync();
             using var reader = new StreamReader(stream);
 
-            Chats.activeChat.Add(""); //(" Bot: "); // INTENTIONALLY BLANK, DO NOT REMOVE.
+            Chats.activeChat.Add("Bot: "); //(" Bot: "); // INTENTIONALLY WITH BOT NOW! IT WILL WORK THIS TIME.
             while (!reader.EndOfStream)
             {
                 var line = await reader.ReadLineAsync();
