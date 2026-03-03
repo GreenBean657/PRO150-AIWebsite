@@ -2,8 +2,7 @@
     background-image: linear-gradient(to bottom, #808080ff, #404040);
     background-size: cover;
     font-family: Courier New;
-    color: blue;
-    font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+    font-family: Tahoma, Verdana, sans-serif;
 }
 
 .centerTextDiv {
@@ -14,6 +13,16 @@
     background: none;
     border: none;
     width: 80%;
+}
+
+.chatbox {
+    height: 90vh;
+    background-color: lightslategray;
+    overflow: scroll;
+}
+
+.end {
+    text-align: end;
 }
 
 img {
