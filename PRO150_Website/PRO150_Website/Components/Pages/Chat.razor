@@ -6,14 +6,14 @@
 @inject HttpClient Http
 <PageTitle>Chat</PageTitle>
 
-<div style="text-align: end">
+<div class="end">
     <button type="button" 
         class="btn btn-primary"
         @onclick="NewChat">
         Start New Chat
     </button>
 </div>
-<div style="height: 90vh; background-color: lightslategray">
+<div class="chatbox">
     @foreach (string c in Chats.activeChat)
     {
         <div>@c</div>
@@ -21,7 +21,7 @@
     }
 
 </div>
-<div style="height: 50px; text-align: end;">
+<div style="height: 50px;" class="end">
     <EditForm FormName="Message" Model="message" OnValidSubmit="OnSubmit">
         <DataAnnotationsValidator />
         <div>
@@ -47,7 +47,7 @@
         }
     }
 
-    private async Task SendRequest(ChatMessage msg, string model = "openai/chatgpt-oss-120b")
+    private async Task SendRequest(ChatMessage msg, string model = "google/gemma-3-4b")
     {
         var request = new ChatRequest
         {
@@ -85,7 +85,7 @@
             using var stream = await response.Content.ReadAsStreamAsync();
             using var reader = new StreamReader(stream);
 
-            Chats.activeChat.Add("Bot: "); // INTENTIONALLY BLANK, DO NOT REMOVE.
+            Chats.activeChat.Add(""); //(" Bot: "); // INTENTIONALLY BLANK, DO NOT REMOVE.
             while (!reader.EndOfStream)
             {
                 var line = await reader.ReadLineAsync();
