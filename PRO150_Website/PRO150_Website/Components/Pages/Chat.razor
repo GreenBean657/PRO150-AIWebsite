@@ -55,7 +55,7 @@
             stream = true,
             messages = new()
             {
-                new SystemPromptBuilder().BuildMsg("`Bot:` is you, `User:` is the user. Respond to the most recent `User:` query."),
+                new SystemPromptBuilder().BuildMsg("Respond to the most recent `User:` query. Do not add 'Bot:' to your message. Do not append the word bot to your message in any form."),
                 msg
             }
         };
@@ -98,6 +98,11 @@
                 if (line == "[DONE]")
                 {
                     break;
+                }
+
+                if (line == "Bot:" || line == "'Bot:'" || line == "`Bot:`")
+                {
+                    continue;
                 }
 
                 try

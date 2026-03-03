@@ -16,9 +16,9 @@ namespace PRO150_Website.Components.Models
 
     public class SystemPromptBuilder
     {
-        public ChatMessage BuildMsg(string prompt)
+        public ChatMessage BuildMsg(string characterCard, string prompt)
         {
-            return new ChatMessage{role = "system", content = prompt};
+            return new ChatMessage{role = "system", content = prompt + " " + characterCard + " " + prompt};
         }
     }
 }
