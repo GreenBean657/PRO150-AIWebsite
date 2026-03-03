@@ -1,19 +1,47 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
+using Npgsql;
 
 namespace PRO150_Website.Components.Models
 {
     public class LoginInfo
     {
-        [Required(ErrorMessage = "Email Rquried")]
-        public string Email { get; set; } = null;
+        [Required(ErrorMessage = "Email Required")]
+        [EmailAddress(ErrorMessage = "Invalid Email")]
+        public string Email { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Password Required")]
-        public string Password { get; set; } = null;
-
-        public bool ValadateLogin()
+        public string Password { get; set; } = string.Empty;
+        
+        public async Task<bool> ValidateLoginAsync(IConfiguration configuration)
         {
-            //to be implmented
-            return true;
+            var connStr = configuration.GetConnectionString("DefaultConnection");
+            if (string.IsNullOrWhiteSpace(connStr))
+                return false;
+
+            if (string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Password))
+                return false;
+
+            await using var conn = new NpgsqlConnection(connStr);
+            await conn.OpenAsync();
+
+            // Parameterized to prevent SQL injection
+            const string sql = @"SELECT ""UserPassword""
+                                FROM ""User""
+                                WHERE ""Email"" = @email
+                                LIMIT 1;";
+
+            await using var cmd = new NpgsqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("email", Email);
+
+            var result = await cmd.ExecuteScalarAsync();
+
+            if (result is not string storedPassword)
+                return false; // no such email
+
+            // Plaintext comparison for now (you'll switch to bcrypt/argon2 later)
+            return storedPassword == Password;
         }
     }
 }
