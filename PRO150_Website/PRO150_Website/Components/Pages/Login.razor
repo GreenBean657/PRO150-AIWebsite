@@ -2,6 +2,7 @@
 @layout BaseLayout
 @rendermode InteractiveServer
 @inject NavigationManager NavigationManager
+@inject IConfiguration Configuration
 <HeadContent>
     <link rel="stylesheet" href="@Assets["login.css"]" />
 </HeadContent>
@@ -50,24 +51,46 @@
 
             <button type="submit" class="btn btn-primary">Submit</button>
         </EditForm>
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <div style="color: red; margin-top: 15px;">@errorMessage</div>
+        }
     </div>
 </div>
 
 @code {
     private bool isLoginActive = true;
+    private string errorMessage = string.Empty;
 
     private void SetActive(bool loginActive)
     {
         isLoginActive = loginActive;
         info = new LoginInfo();
+        errorMessage = string.Empty;
     }
 
     private LoginInfo info = new LoginInfo();
 
-    private void Submit()
+    private async Task Submit()
     {
-        if(info.ValadateLogin())
+        errorMessage = string.Empty;
+
+        if (isLoginActive)
         {
+            // Validate login credentials
+            bool isValid = await info.ValidateLoginAsync(Configuration);
+            if (isValid)
+            {
+                NavigationManager.NavigateTo("/Home");
+            }
+            else
+            {
+                errorMessage = "Invalid email or password.";
+            }
+        }
+        else
+        {
+            // For sign up, just proceed (or implement sign up validation)
             NavigationManager.NavigateTo("/Home");
         }
     }
