@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PRO150_Website")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e9bf7ea1768a6bfaa8c51cd251864ca9d96fb14")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e4062973ee257403bfc8916fc1722a5944716702")]
 [assembly: System.Reflection.AssemblyProductAttribute("PRO150_Website")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PRO150_Website")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
