@@ -87,3 +87,6 @@ C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\ref\PRO150_Website.dll
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\compressed\rsh2dgos0l-{0}-prqlo1gyho-prqlo1gyho.gz
 C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\compressed\iw7ohnj5ce-{0}-ixucqw12tw-ixucqw12tw.gz
+C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\PRO150_Website.csproj.AssemblyReference.cache
+C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\bin\Debug\net10.0\Npgsql.dll
+C:\Users\kcradic\source\repos\PRO150-AIWebsite\PRO150_Website\PRO150_Website\obj\Debug\net10.0\PRO150_W.5745E8FC.Up2Date

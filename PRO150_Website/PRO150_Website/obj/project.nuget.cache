@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ttXWV0UC6EM=",
+  "dgSpecHash": "3B2sm1lfrBc=",
   "success": true,
   "projectFilePath": "C:\\Users\\kcradic\\source\\repos\\PRO150-AIWebsite\\PRO150_Website\\PRO150_Website\\PRO150_Website.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\kcradic\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.1\\microsoft.aspnetcore.app.internal.assets.10.0.1.nupkg.sha512"
+    "C:\\Users\\kcradic\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.1\\microsoft.aspnetcore.app.internal.assets.10.0.1.nupkg.sha512",
+    "C:\\Users\\kcradic\\.nuget\\packages\\npgsql\\10.0.1\\npgsql.10.0.1.nupkg.sha512"
   ],
   "logs": []
 }
