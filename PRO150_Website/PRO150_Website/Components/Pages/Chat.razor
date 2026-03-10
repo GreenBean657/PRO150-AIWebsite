@@ -6,24 +6,27 @@
 @inject HttpClient Http
 <PageTitle>Chat</PageTitle>
 
-@if (Chats.activeChat != null) {
-    <div>
-        <EditForm Model="@AImodel" OnValidSubmit="Refresh">
-            <InputSelect @bind-Value="AImodel.Model">
-                <option value="">-- Select AI Model --</option>
-                @foreach (var model in AllAIModels.AIModels)
-                {
-                    <option value="@model.Model">@model.Model</option>
-                }
-            </InputSelect>
-            <button type="submit" class="btn btn-dark">Refresh</button>
+<div>
+    <EditForm Model="@AImodel" OnValidSubmit="Refresh">
+        <InputSelect @bind-Value="AImodel.Model">
+            <option value="">-- Select AI Model --</option>
+            @foreach (var model in AllAIModels.AIModels)
+            {
+                <option value="@model.Model">@model.Model</option>
+            }
+        </InputSelect>
+        <button type="submit" class="btn btn-dark">Refresh</button>
+        @if (Chats.activeChat != null)
+        {
             <button type="button" 
-                class="btn btn-primary"
-                @onclick="NewChat">
+            class="btn btn-primary"
+            @onclick="NewChat">
                 Start New Chat
             </button>
-        </EditForm>
-    </div>
+        }
+    </EditForm>
+</div>
+@if (Chats.activeChat != null) {
     <div class="chatbox">
         @foreach (string c in Chats.activeChat)
         {

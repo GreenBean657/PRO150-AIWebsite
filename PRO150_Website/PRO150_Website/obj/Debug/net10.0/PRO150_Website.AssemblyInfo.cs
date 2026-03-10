@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PRO150_Website")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+beaaed2a16827bb179cf958e41109d05a0637cb1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10a5a2a05fa470b1de7970091259239d9f6332a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("PRO150_Website")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PRO150_Website")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
