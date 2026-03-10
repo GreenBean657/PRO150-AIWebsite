@@ -90,8 +90,20 @@
         }
         else
         {
-            // For sign up, just proceed (or implement sign up validation)
-            NavigationManager.NavigateTo("/Home");
+            // For sign up, use RegisterInfo model
+            var regInfo = new RegisterInfo
+            {
+                Email = info.Email,
+                Password = info.Password,
+                ConfirmPassword = info.Password
+            };
+            
+            bool isRegistered = await regInfo.RegisterAsync(Configuration);
+            if (isRegistered) {
+                NavigationManager.NavigateTo("/Home");
+            } else {
+                errorMessage = "Registration failed. Email may already be in use.";
+            }
         }
     }
 }

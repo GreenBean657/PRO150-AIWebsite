@@ -54,4 +54,66 @@ namespace PRO150_Website.Components.Models {
             return storedPassword == Password.Trim();
         }
     }
+
+    public class RegisterInfo {
+        [Required(ErrorMessage = "Email Required")]
+        [EmailAddress(ErrorMessage = "Invalid Email")]
+        public string Email { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Password Required")]
+        public string Password { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Confirm Password Required")]
+        [Compare("Password", ErrorMessage = "Passwords do not match")]
+        public string ConfirmPassword { get; set; } = string.Empty;
+
+        public async Task<bool> RegisterAsync(IConfiguration configuration)
+        {
+            var connStr = configuration.GetConnectionString("DefaultConnection");
+            if (string.IsNullOrWhiteSpace(connStr))
+            {
+                Console.WriteLine("[DEBUG] No connection string named 'DefaultConnection' found.");
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Password))
+            {
+                Console.WriteLine("[DEBUG] Email or password missing.");
+                return false;
+            }
+
+            await using var conn = new NpgsqlConnection(connStr);
+            await conn.OpenAsync();
+
+            // Check if email already exists
+            const string checkSql = @"SELECT COUNT(*) FROM ""User"" WHERE LOWER(""email"") = LOWER(@email);";
+            await using var checkCmd = new NpgsqlCommand(checkSql, conn);
+            checkCmd.Parameters.AddWithValue("email", Email.Trim());
+
+            var count = (long?)await checkCmd.ExecuteScalarAsync() ?? 0;
+            if (count > 0)
+            {
+                Console.WriteLine("[DEBUG] Email already exists.");
+                return false;
+            }
+
+            // Insert new user
+            const string insertSql = @"INSERT INTO ""User"" (""email"", ""userpassword"") VALUES (@email, @password);";
+            await using var insertCmd = new NpgsqlCommand(insertSql, conn);
+            insertCmd.Parameters.AddWithValue("email", Email.Trim());
+            insertCmd.Parameters.AddWithValue("password", Password.Trim());
+
+            try
+            {
+                await insertCmd.ExecuteNonQueryAsync();
+                Console.WriteLine("[DEBUG] User registered successfully.");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[DEBUG] Registration error: {ex.Message}");
+                return false;
+            }
+        }
+    }
 }
