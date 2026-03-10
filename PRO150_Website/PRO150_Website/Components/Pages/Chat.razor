@@ -6,29 +6,41 @@
 @inject HttpClient Http
 <PageTitle>Chat</PageTitle>
 
-<div class="end">
-    <button type="button" 
-        class="btn btn-primary"
-        @onclick="NewChat">
-        Start New Chat
-    </button>
-</div>
-<div class="chatbox">
-    @foreach (string c in Chats.activeChat)
-    {
-        <div>@c</div>
-        <br />
-    }
+@if (Chats.activeChat != null) {
+    <div class="end">
+        <button type="button" 
+            class="btn btn-primary"
+            @onclick="NewChat">
+            Start New Chat
+        </button>
+    </div>
+    <div class="chatbox">
+        @foreach (string c in Chats.activeChat)
+        {
+            <div>@c</div>
+            <br />
+        }
 
-</div>
-<div style="height: 50px;" class="end">
-    <EditForm FormName="Message" Model="message" OnValidSubmit="OnSubmit">
-        <DataAnnotationsValidator />
-        <div>
-            <InputText style="width: 70%" id="message" @bind-Value="message.message" />
-        </div>
-    </EditForm>
-</div>
+    </div>
+    <div style="height: 50px;" class="end">
+        <EditForm FormName="Message" Model="message" OnValidSubmit="OnSubmit">
+            <DataAnnotationsValidator />
+            <div>
+                <InputText style="width: 70%" id="message" @bind-Value="message.message" />
+            </div>
+        </EditForm>
+    </div>
+} else
+{
+    <div class="chatbox centerd">
+        <div>NO ACTIVE CHAT</div>
+        <button type="button"
+                class="btn btn-primary"
+                @onclick="NewChat">
+            Start New Chat
+        </button>
+    </div>
+}
 
 @code {
     private Message message = new Message();
@@ -40,8 +52,8 @@
         {
             canSubmit = false;
             Chats.activeChat.Add("User: " + message.message);
-            await SendRequest(new MessageBuilder().BuildMsg(Chats.activeChat));
             message.message = "";
+            await SendRequest(new MessageBuilder().BuildMsg(Chats.activeChat));
             StateHasChanged();
             canSubmit = true;
         }
@@ -56,7 +68,7 @@
             stream = true,
             messages = new()
             {
-                new SystemPromptBuilder().BuildMsg(promptBuilder, "Respond to the most recent `User:` query. Do not add 'Bot:' to your message. Do not append the word bot to your message in any form."),
+                new SystemPromptBuilder().BuildMsg(promptBuilder, "Respond to the most recent `User:` query. Do not add 'Bot:' to your message. Do not append the word bot to your message in any form. Respond in less than 500 words"),
                 msg
             }
         };

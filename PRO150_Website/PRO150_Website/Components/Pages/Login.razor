@@ -33,6 +33,7 @@
                     <InputText id="password" @bind-Value="info.Password"/>
                     <ValidationMessage For="@(() => info.Password)" />
                 </div>
+                <button type="submit" class="btn btn-primary">Log In</button>
             }
             else
             {
@@ -47,9 +48,8 @@
                     <InputText id="password" @bind-Value="info.Password" />
                     <ValidationMessage For="@(() => info.Password)" />
                 </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
             }
-
-            <button type="submit" class="btn btn-primary">Submit</button>
         </EditForm>
         @if (!string.IsNullOrEmpty(errorMessage))
         {

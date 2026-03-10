@@ -25,6 +25,13 @@
     text-align: end;
 }
 
+.centerd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 img {
     width: 30%;
     margin-left: 35%;

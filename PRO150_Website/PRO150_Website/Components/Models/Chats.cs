@@ -5,12 +5,9 @@
     {
         public static List<List<string>> allChats = new List<List<string>>();
 
-        public static List<string> activeChat = new List<string>();
+        public static List<string> activeChat;
 
-        static Chats()
-        {
-            allChats.Add(activeChat);
-        }
+        static Chats() { }
 
         public static void NewChat()
         {
