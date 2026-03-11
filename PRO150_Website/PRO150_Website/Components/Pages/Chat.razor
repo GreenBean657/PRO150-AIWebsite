@@ -6,14 +6,27 @@
 @inject HttpClient Http
 <PageTitle>Chat</PageTitle>
 
-@if (Chats.activeChat != null) {
-    <div class="end">
-        <button type="button" 
+<div>
+    <EditForm Model="@AImodel" OnValidSubmit="Refresh">
+        <InputSelect @bind-Value="AImodel.Model">
+            <option value="">-- Select AI Model --</option>
+            @foreach (var model in AllAIModels.AIModels)
+            {
+                <option value="@model.Model">@model.Model</option>
+            }
+        </InputSelect>
+        <button type="submit" class="btn btn-dark">Refresh</button>
+        @if (Chats.activeChat != null)
+        {
+            <button type="button" 
             class="btn btn-primary"
             @onclick="NewChat">
-            Start New Chat
-        </button>
-    </div>
+                Start New Chat
+            </button>
+        }
+    </EditForm>
+</div>
+@if (Chats.activeChat != null) {
     <div class="chatbox">
         @foreach (string c in Chats.activeChat)
         {
@@ -46,6 +59,28 @@
     private Message message = new Message();
     private bool canSubmit = true;
 
+    private AIModel AImodel = new AIModel();
+
+    async private void Refresh()
+    {
+        var httpRequest = new HttpRequestMessage(
+            HttpMethod.Get,
+            "http://localhost:1234/v1/models"
+        );
+        var response = await Http.SendAsync(
+            httpRequest,
+            HttpCompletionOption.ResponseHeadersRead
+        );
+        var models = await response.Content.ReadFromJsonAsync<AIModelListApi>();
+        AllAIModels.AIModels = models.data
+            .Select(m => new AIModel { Model = m.id })
+            .ToList();
+        foreach (var model in AllAIModels.AIModels)
+        {
+            Console.WriteLine(model.Model);            
+        }
+    }
+
     async private void OnSubmit()
     {
         if (canSubmit)
@@ -53,14 +88,12 @@
             canSubmit = false;
             Chats.activeChat.Add("User: " + message.message);
             message.message = "";
-            await SendRequest(new MessageBuilder().BuildMsg(Chats.activeChat));
-            StateHasChanged();
+            await SendRequest(new MessageBuilder().BuildMsg(Chats.activeChat), AImodel.Model);            StateHasChanged();
             canSubmit = true;
         }
     }
 
-    private async Task SendRequest(ChatMessage msg, string model = "google/gemma-3-4b")
-    {
+    private async Task SendRequest(ChatMessage msg, string model)    {
         string promptBuilder = " ";
         var request = new ChatRequest
         {
