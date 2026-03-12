@@ -7,6 +7,11 @@
 ## Clone the Repository:
   git clone https://github.com/GreenBean657/PRO150-AIWebsite.git
 
+## Made With:
+  VSCode 2026
+  LM studio
+  PostgresSQL
+
 ## About:
   A simple chatbot website where to user can sign up/log in to an account and chat with different AI-models.
   User can view their chat history and begain with a clean slate by make a new chat.
