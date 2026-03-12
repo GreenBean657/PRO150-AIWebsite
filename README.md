@@ -23,4 +23,5 @@
 ```
   A simple chatbot website where to user can sign up/log in to an account and chat with different AI-models.
   User can view their chat history and begain with a clean slate by make a new chat.
+  Just click the RUN button in VS code to start
 ```
