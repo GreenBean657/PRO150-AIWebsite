@@ -31,5 +31,5 @@
   Google (works)
   Opera (works)
 
-  Linix (styling breaks)
+  Linux (styling breaks)
 ```
