@@ -4,7 +4,7 @@
   .net10
   VSCode 2026 with C#
   
-##Clone the Repository:
+## Clone the Repository:
   git clone https://github.com/GreenBean657/PRO150-AIWebsite.git
 
 ## About:
