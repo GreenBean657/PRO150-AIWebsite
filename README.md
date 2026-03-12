@@ -25,3 +25,11 @@
   User can view their chat history and begain with a clean slate by make a new chat.
   Just click the RUN button in VS code to start
 ```
+
+## Works/Dosn't Work In
+```
+  Google (works)
+  Opera (works)
+
+  Linix (styling breaks)
+```
